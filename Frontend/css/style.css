@@ -1,0 +1,16 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+
+.menu{
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+    img{
+        width: 100px;
+    }
+}
