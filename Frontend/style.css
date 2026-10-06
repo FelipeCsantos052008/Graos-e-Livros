@@ -5,7 +5,7 @@
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-.top-bar {
+.topbar {
     background-color: #1e3522;
     color: #f7f4eb;
     text-align: center;
@@ -22,6 +22,7 @@
     align-items: center;
     padding: 15px 40px;
     border-bottom: 1px solid #e0dacb;
+    max-height: 100px;
 }
 
 .brand {
@@ -29,42 +30,12 @@
     flex-direction: column;
 }
 
-.logo {
+
+.menu{
     display: flex;
-    align-items: center;
-    font-size: 1.6rem;
-    font-weight: bold;
-    color: #2b2b2b;
-}
-
-.icon-coffee {
-    margin-right: 8px;
-    font-size: 1.4rem;
-}
-
-.ampersand {
-    color: #c08261;
-    font-weight: normal;
-    margin: 0 2px;
-}
-
-.slogan {
-    font-size: 0.6rem;
-    letter-spacing: 3px;
-    color: #707070;
-    margin-top: -2px;
-    font-weight: 600;
-}
-
-.nav-actions {
-    display: flex;
-    gap: 20px;
-    align-items: center;
-}
-
-.action-btn {
-    background: none;
-    cursor: pointer;
-    font-size: 1.2rem;
-    color: #2;
+    justify-content: space-between;
+    padding: 1rem;
+    img{
+        width: 100px;
+    }
 }
