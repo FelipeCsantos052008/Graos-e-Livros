@@ -22,6 +22,7 @@
     align-items: center;
     padding: 15px 40px;
     border-bottom: 1px solid #e0dacb;
+    max-height: 100px;
 }
 
 .brand {
@@ -32,14 +33,14 @@
 .logo {
     display: flex;
     align-items: center;
-    font-size: 1.6rem;
+    font-size: 1.2rem;
     font-weight: bold;
     color: #2b2b2b;
 }
 
-.icon-coffee {
+.Icon {
     margin-right: 8px;
-    font-size: 1.4rem;
+    transform:scale(0.2)
 }
 
 .ampersand {
@@ -68,6 +69,7 @@
     font-size: 1.2rem;
     color: #2b2b2b;
     transition: transform 0.2s ease, color 0.2s ease;
+    transform: scale(0.1);
 }
 
 .action-btn:hover{
@@ -78,4 +80,5 @@
 .menu-hamburguer{
     font-size: 1.4rem;
     margin-left: 5px;
+    transform: scale(0.1);
 }
