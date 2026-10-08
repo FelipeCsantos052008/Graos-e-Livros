@@ -1,25 +1,22 @@
 
-:root{
-	--bg:#0f1720;
-	--card: rgba(255,255,255,0.03);
-	--accent:#ffd166;
-	--muted: #cbd5e1;
+:root {
+  color-scheme: dark;
+  --bg: #0f1720;
+  --panel: #19232d;
+  --accent: #ffd166;
+  --gold: #d4af37;
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
 }
 body{
 	margin:0;
 	font-family: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
-	background-color: #d4cbb7;
+	background: var(--bg);
 	color: #fff;
 	padding:24px;
-}
-
-topbar {
-  padding: 8px 16px;
-  color: #f7f4eb;
-  text-align: center;
-  font-size: 0.75rem;
-  font-weight: 500;
-  letter-spacing: 1.5px;
 }
 
 header{
@@ -27,7 +24,7 @@ header{
 	align-items:center;
 	gap:20px;
 	padding:14px 18px;
-	background-color: #f7f4eb;
+	background-color: #6b3f1a;
 	box-shadow: 0 4px 12px rgba(0,0,0,0.5);
 }
 .logo{
@@ -50,17 +47,18 @@ header{
     letter-spacing:0.6px;
     transition: 0.14s ease, color 0.12s ease, transform 0.12s ease;
 }
-.opcoes a:hover{
-    background: rgba(255,215,0,0.06);
-    color:#ffd700;
-    transform:translateY(-2px);
-}
-h1{
-    margin:8px 0 22px;
-    color:var(--accent);
-    text-align:center;
+
+.opcoes a:hover,
+.opcoes a:focus-visible {
+  color: #8a6813;
+  background: rgba(212, 175, 55, 0.14);
 }
 
+h1 {
+  margin: 32px 16px 20px;
+  color: var(--accent);
+  text-align: center;
+}
 
 .secao-principal{
   display:flex;
