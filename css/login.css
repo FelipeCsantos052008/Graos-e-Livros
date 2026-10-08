@@ -1,0 +1,160 @@
+:root{
+  --accent: #ffd87a;
+  --muted: rgba(255,255,255,0.85);
+  --glass: rgba(0,0,0,0.45);
+  --input-border: rgba(255,255,255,0.12);
+  --radius: 12px;
+}
+
+/* reset / base */
+*{ box-sizing: border-box; margin:0; padding:0; font-family: "Poppins", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+html,body{ height:100%; }
+
+body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('../img/canva-vintage-dark-academia-aesthetic-styled-desk,-writer-aesthetic-MAFdpKe8sW8.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  -webkit-font-smoothing: antialiased;
+}
+/* cartão central (glass) */
+.wrapper{
+  width: min(420px, 92%);
+  padding: 30px;
+  border-radius: var(--radius);
+  background: linear-gradient(180deg, rgba(255,255,255,0.03), rgba(255,255,255,0.02));
+  border: 1px solid rgba(255,255,255,0.06);
+  backdrop-filter: blur(6px);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+  color: var(--muted);
+}
+
+/* título */
+.wrapper h1{
+  font-size: 32px;
+  line-height: 1;
+  text-align: center;
+  margin-bottom: 18px;
+  color: #fff;
+  font-weight: 600;
+}
+
+/* campo */
+.wrapper .box{
+  position: relative;
+  width: 100%;
+  margin: 18px 0;
+  height: 52px;
+}
+
+.box input{
+  width: 100%;
+  height: 100%;
+  background: transparent;
+  border: 1px solid var(--input-border);
+  outline: none;
+  border-radius: 999px;
+  padding: 12px 48px 12px 18px;
+  font-size: 15px;
+  color: #fff;
+  transition: border-color 150ms ease, box-shadow 150ms ease;
+}
+
+/* placeholder */
+.box input::placeholder{
+  color: rgba(255,255,255,0.7);
+  font-size: 15px;
+}
+
+/* foco acessível */
+.box input:focus{
+  border-color: var(--accent);
+  box-shadow: 0 4px 18px rgba(255,216,122,0.12);
+}
+
+/* ícone dentro do input (ion-icon) */
+.box ion-icon{
+  position: absolute;
+  right: 14px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 20px;
+  color: rgba(255,255,255,0.85);
+  pointer-events: none;
+}
+
+/* lembrar/senha/esqueci */
+.wrapper .relembrar{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  margin-top: -8px;
+  margin-bottom: 14px;
+  color: rgba(255,255,255,0.85);
+}
+
+.relembrar label{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+.relembrar input[type="checkbox"]{
+  width: 16px; height: 16px;
+  accent-color: var(--accent);
+}
+
+/* link pequeno */
+.relembrar a{
+  color: rgba(255,255,255,0.9);
+  text-decoration: none;
+  font-weight: 600;
+}
+.relembrar a:hover{ text-decoration: underline; }
+
+/* botão principal */
+.wrapper .btn{
+  width: 100%;
+  height: 48px;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 700;
+  color: #222;
+  background: linear-gradient(180deg, var(--accent), #f0c469);
+  box-shadow: 0 8px 18px rgba(0,0,0,0.35);
+  transition: transform 120ms ease, box-shadow 120ms ease, filter 120ms ease;
+}
+.wrapper .btn:active{ transform: translateY(1px); }
+.wrapper .btn:focus{ outline: 3px solid rgba(255,216,122,0.18); }
+
+/* registro / rodapé do card */
+.wrapper .registro{
+  text-align: center;
+  margin-top: 18px;
+  font-size: 14px;
+  color: rgba(255,255,255,0.9);
+}
+
+.registro a{
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 700;
+}
+.registro a:hover{ text-decoration: underline; }
+
+/* responsividade */
+@media (max-width:420px){
+  .wrapper{ padding: 22px; }
+  .wrapper h1{ font-size: 26px; }
+  .box input{ padding-right: 44px; font-size: 15px; }
+}
+
+a{ color: var(--accent); }

@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ínicio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css">
+    <link rel="stylesheet" href="../css/frontpage.css">
+</head>
+<body>
+    <header>
+        <div class="topbar">
+            <p>UM BOM LIVRO MERECE OUTRA HISTÓRIA. E UM BOM CAFÉ TAMBÉM.</p>
+        </div>
+
+        <div class="navbar">
+            <div class="menu">
+                <div class="brand">
+                    <img src="../img/LOGO.jpg" alt="logo" class="logo">
+                </div>
+
+                <div class="icons">
+                    
+                    <form action="../html/frontpage.html">
+                        <button type="submit"> <img src="" alt="Home">
+                        </button>
+                    </form>
+                    
+                    <form action="../html/populares.html">
+                        <button type="submit"> <img src="" alt="populares">
+                        </button>
+                    </form>
+                    
+                    <form action="../html/autores.html">
+                        <button type="submit"> <img src="" alt="autores">
+                        </button>
+                    </form>
+
+                    <form action="../html/index.html">
+                    <button type="submit"> <img src="../images/menu.png" alt="menu"></button>
+                </form>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="carousel banner-carousel" aria-label="Banner principal">
+        <div><img src="../img/BLOCO 1.jpg" alt="BANNER1"></div>
+        <div><img src="../img/BLOCO 2.jpg" alt="BANNER2"></div>
+        <div><img src="../img/BLOCO 3.jpg" alt="BANNER3"></div>
+        <div><img src="../img/BLOCO4.jpg" alt="BANNER4"></div>
+        <div><img src="../img/BLOCO5.jpg" alt="BANNER5"></div>
+    </div>
+
+    <h1>Clássicos:</h1>
+    <div class="carousel1 catalog-carousel" aria-label="Clássicos">
+        <div><a href="Dracula.html"><img src="../img/DRACULA.jpg" alt="livro drácula"></a></div>
+        <div><a href="medico.html"><img src="../img/O MEDICO.jpg" alt="livro o médico e o monstro"></a></div>
+        <div><a href="Macbeth.html"><img src="../img/MACBETH.jpg" alt="livro macbeth"></a></div>
+        <div><a href="drmoreau.html"><img src="../img/DR.MOREAU.jpg" alt="livro a ilha do dr.Moreau"></a></div>
+        <div><a href="#"><img src="../img/MOSQUETEIROS.jpg" alt="livro os três mosqueteiros"></a></div>
+        <div><a href="Hamlet.html"><img src="../img/HAMLET.jpg" alt="livro hamlet"></a></div>
+        <div><a href="#"><img src="../img/MONTE.jpg" alt="livro o conde de monte cristo"></a></div>
+    </div>
+
+    <h1>Lançamentos:</h1>
+    <div class="carousel2 catalog-carousel" aria-label="Lançamentos">
+        <div><a href="crime.html"><img src="../img/CRIME E CASTIGO.jpg" alt="livro crime e castigo"></a></div>
+        <div><a href="o jogador.html"><img src="../img/O JOGADOR.jpg" alt="livro o jogador"></a></div>
+        <div><a href="../html/Senhor dos Anéis.html"><img src="../img/SENHOR.jpg" alt="livro Senhor dos anéis"></a></div>
+        <div><a href="jurassic.html"><img src="../img/JURASSIC.jpg" alt="livro Jurassic Park"></a></div>
+        <div><a href="opoderoso.html"><img src="../img/PODEROSO.jpg" alt="livro o poderoso chefão"></a></div>
+    </div>
+
+    <h1>Mistério e Drama:</h1>
+    <div class="carousel3 catalog-carousel" aria-label="Mistério e Drama">
+        <div><a href="#"><img src="../img/CASO.jpg" alt="livro o ultimo caso de Sherlock Holmes"></a></div>
+        <div><a href="#"><img src="../img/CORALINE.jpg" alt="livro Coraline"></a></div>
+        <div><a href="#"><img src="../img/BASKERVILLE.jpg" alt="livro Baskerville"></a></div>
+        <div><a href="#"><img src="../img/ANNE.jpg" alt="livro Anne Frank"></a></div>
+        <div><a href="#"><img src="../img/CASA.jpg" alt="livro o Vale do medo"></a></div>
+        <div><a href="#"><img src="../img/VERMELHO.jpg" alt="livro o Caso em Vermelho"></a></div>
+        <div><a href="#"><img src="../img/MOBY.jpg" alt="livro moby Dick"></a></div>
+    </div>
+
+    <h1>Literatura Brasileira</h1>
+    <div class="carousel4 catalog-carousel" aria-label="Literatura Brasileira">
+        <div><a href="#"><img src="../img/BORBAS.jpg" alt="livro Borba"></a></div>
+        <div><a href="#"><img src="../img/ESPELHO.jpg" alt="livro espelho"></a></div>
+        <div><a href="#"><img src="../img/CASMURRO.jpg" alt="livro Dom Casmurro"></a></div>
+        <div><a href="#"><img src="../img/CASA.jpg" alt="livro casa"></a></div>
+        <div><a href="#"><img src="../img/MEMORIAS.jpg" alt="livro memórias"></a></div>
+    </div>
+
+    <script src="../java.js"></script>
+    <script>
+        const bannerSlides = document.querySelectorAll('.banner-carousel > div');
+
+        if (bannerSlides.length > 1) {
+            let currentSlide = 0;
+
+            setInterval(() => {
+                bannerSlides[currentSlide].style.display = 'none';
+                currentSlide = (currentSlide + 1) % bannerSlides.length;
+                bannerSlides[currentSlide].style.display = 'block';
+            }, 2500);
+        }
+    </script>
+</body>

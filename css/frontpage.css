@@ -1,0 +1,330 @@
+
+:root {
+  color-scheme: dark;
+  --bg: #0f1720;
+  --panel: #19232d;
+  --accent: #ffd166;
+  --gold: #d4af37;
+  --max-width: 1200px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  min-width: 320px;
+  margin: 0;
+  padding: 0 0 32px;
+  color: #fff;
+  background: var(--bg);
+  font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+header {
+  width: 100%;
+  background: #1e3522;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+}
+
+.topbar {
+  padding: 8px 16px;
+  color: #f7f4eb;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  letter-spacing: 1.5px;
+}
+
+.topbar p {
+  margin: 0;
+}
+
+.navbar {
+  background: #fcfaf2;
+  border-bottom: 1px solid #e0dacb;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: min(100% - 40px, var(--max-width));
+  min-height: 88px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  width: 120px;
+  max-height: 68px;
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.icons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 14px;
+}
+
+.icons form {
+  margin: 0;
+}
+
+.icons button {
+  display: grid;
+  place-items: center;
+  min-width: 44px;
+  min-height: 44px;
+  padding: 8px;
+  color: #263327;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.icons button:hover,
+.icons button:focus-visible {
+  background: #e8e3d5;
+  border-color: #d4cbb7;
+}
+
+.icons img {
+  display: block;
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
+}
+
+.opcoes {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 12px;
+}
+
+.opcoes a {
+  padding: 8px 12px;
+  color: var(--gold);
+  font-weight: 700;
+  letter-spacing: 0.6px;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: color 0.12s ease, background-color 0.12s ease;
+}
+
+.opcoes a:hover,
+.opcoes a:focus-visible {
+  color: #8a6813;
+  background: rgba(212, 175, 55, 0.14);
+}
+
+h1 {
+  margin: 32px 16px 20px;
+  color: var(--accent);
+  text-align: center;
+}
+
+.carousel {
+  width: min(90%, var(--max-width));
+  margin: 28px auto 40px;
+  overflow: hidden;
+  border: 1px solid rgba(212, 175, 55, 0.18);
+  border-radius: 14px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6);
+}
+
+.banner-carousel {
+  position: relative;
+  min-height: 100px;
+  background: var(--panel);
+}
+
+.banner-carousel > div {
+  display: none;
+}
+
+.banner-carousel > div:first-child {
+  display: block;
+}
+
+.banner-carousel img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.catalog-carousel {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 170px), 1fr));
+  align-items: stretch;
+  gap: 18px;
+  width: min(100% - 40px, var(--max-width));
+  margin: 0 auto 36px;
+}
+
+.catalog-carousel > div {
+  display: flex;
+  justify-content: center;
+  min-width: 0;
+  padding: 12px;
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.catalog-carousel > div:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.catalog-carousel a {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
+.catalog-carousel img {
+  display: block;
+  width: 100%;
+  height: 260px;
+  object-fit: contain;
+}
+
+.catalogo-section {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  width: min(100% - 40px, var(--max-width));
+  margin: 18px auto;
+}
+
+.catalogo-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+  gap: 16px;
+  width: 100%;
+}
+
+.catalogo-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  padding: 12px;
+  background: var(--panel);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  transition: transform 0.16s ease, box-shadow 0.16s ease;
+}
+
+.catalogo-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 14px 30px rgba(0, 0, 0, 0.6);
+}
+
+.book-cover {
+  display: block;
+  width: 90%;
+  height: 260px;
+  overflow: hidden;
+  background: #111;
+  border: 2px solid rgba(212, 175, 55, 0.08);
+  border-radius: 8px;
+  object-fit: contain;
+}
+
+.book-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.play-button {
+  position: absolute;
+  right: 10px;
+  bottom: 10px;
+  padding: 10px 14px;
+  color: #111;
+  background: linear-gradient(180deg, var(--gold), #ffd700);
+  border: 0;
+  border-radius: 999px;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.45);
+  cursor: pointer;
+  transition: transform 0.12s ease, box-shadow 0.12s ease;
+}
+
+.play-button:hover {
+  transform: translateY(-2px);
+}
+
+a {
+  color: var(--gold);
+  text-decoration: none;
+  transition: color 0.12s ease;
+}
+
+@media (max-width: 600px) {
+  .menu {
+    width: calc(100% - 24px);
+    min-height: 72px;
+    gap: 12px;
+  }
+
+  .logo {
+    width: 88px;
+    max-height: 56px;
+  }
+
+  .icons {
+    gap: 4px;
+  }
+
+  .icons button {
+    min-width: 40px;
+    min-height: 40px;
+    padding: 6px;
+  }
+
+  .catalog-carousel {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
+    width: calc(100% - 24px);
+  }
+
+  .catalog-carousel > div {
+    padding: 8px;
+  }
+
+  .catalog-carousel img {
+    height: 210px;
+  }
+
+  .carousel {
+    width: calc(100% - 24px);
+  }
+
+  h1 {
+    margin-top: 26px;
+    font-size: 1.5rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .menu {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .catalog-carousel {
+    grid-template-columns: 1fr;
+  }
+}
