@@ -18,6 +18,7 @@ body {
   padding: 0 0 32px;
   color: #fff;
   background: var(--bg);
+  background-color: #d4cbb7;
   font-family: Inter, system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
 }
 
@@ -41,7 +42,7 @@ header {
 }
 
 .navbar {
-  background: #c78d36;
+  background: #f7f4eb;
   border-bottom: 1px solid #e0dacb;
 }
 
@@ -125,7 +126,7 @@ header {
 
 h1 {
   margin: 32px 16px 20px;
-  color: var(--accent);
+  color: #111;
   text-align: center;
 }
 
@@ -172,7 +173,7 @@ h1 {
   justify-content: center;
   min-width: 0;
   padding: 12px;
-  background: var(--panel);
+  background-color: #263327;
   border: 1px solid rgba(255, 255, 255, 0.06);
   border-radius: 10px;
   transition: transform 0.16s ease, box-shadow 0.16s ease;
