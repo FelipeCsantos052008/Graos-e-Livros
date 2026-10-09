@@ -7,6 +7,6 @@ const app = express()
 app.use(express.json())
 app.use(routerLogin)
 
-app.listen(3000, () => {
-    console.log("Coisos")
+app.listen(process.env.PORT, () => {
+    console.log("Rodando na porta " + process.env.PORT)
 })
