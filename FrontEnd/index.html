@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Grão &amp; Página — livros com histórias</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="topbar">NESSES TEMPOS, UM BOM LIVRO MERECE OUTRA HISTÓRIA</div>
+
+<header class="header">
+  <div class="header-inner">
+    <button class="mobile-menu" id="menu" aria-label="Abrir menu">☰</button>
+    <a href="#inicio" class="logo-link"><div class="brand"><span class="bean">⌁</span><span><b>grão<span>&amp;</span>página</b><small>livros com histórias</small></span></div></a>
+    <nav>
+      <button data-scroll="catalogo">Explorar livros</button>
+      <button data-scroll="categorias">Categorias</button>
+      <button data-scroll="classicos">Clássicos</button>
+      <button data-sell>Vender um livro</button>
+      <button><a href="./login.html">Login</a></button>
+    </nav>
+    <div class="actions">
+      <label class="search"><span>⌕</span><input class="search-input" placeholder="Buscar livro ou autor"></label>
+      <button class="action" id="bag" aria-label="Sacola">♧<i id="cartCount" hidden>0</i></button>
+      <button class="action" data-scroll="favoritos" aria-label="Favoritos">♡</button>
+    </div>
+  </div>
+  <div class="mobile-nav" id="mobileNav" hidden>
+    <button data-scroll="catalogo">Explorar livros</button>
+    <button data-scroll="categorias">Categorias</button>
+    <button data-scroll="classicos">Clássicos</button>
+    <button data-sell>Vender um livro</button>
+  </div>
+</header>
+
+<main>
+
+  <section class="hero" id="inicio">
+    <div class="hero-copy">
+      <span class="eyebrow">SEBO • CAFÉ • HISTÓRIAS</span>
+      <h1>Livros que já viveram. <em>Histórias que continuam.</em></h1>
+      <p>Uma curadoria de livros usados e novos para quem acredita que uma boa leitura combina com tempo, café e uma segunda chance.</p>
+      <div class="hero-actions">
+        <button class="primary" data-scroll="catalogo">Explorar a estante →</button>
+        <button class="secondary" data-sell>Quero vender um livro</button>
+      </div>
+      <div class="trust">
+        <span>▤ <b>Acervo curado</b><small>títulos selecionados</small></span>
+        <span>⌁ <b>Consumo consciente</b><small>mais histórias, menos desperdício</small></span>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-frame"><img src="assets/BLOCO%202.jpg" alt="Livros e café"></div>
+      <div class="hero-card"><strong>Seu próximo capítulo</strong><span>pode estar aqui.</span></div>
+    </div>
+  </section>
+
+  <section class="categories" id="categorias">
+    <div class="section-head">
+      <div><span class="eyebrow">ENCONTRE SEU GÊNERO</span><h2>Uma estante para cada <em>momento.</em></h2></div>
+    </div>
+    <div class="category-grid">
+        <button class="category category-0" data-cat="Clássicos"><span class="category-number">01</span><div><b>Clássicos</b><small>Grandes histórias e clássicos</small></div><span>→</span></button>
+        <button class="category category-1" data-cat="Literatura brasileira"><span class="category-number">02</span><div><b>Literatura brasileira</b><small>Autores que marcaram o Brasil</small></div><span>→</span></button>
+        <button class="category category-2" data-cat="Mistério &amp; drama"><span class="category-number">03</span><div><b>Mistério &amp; drama</b><small>Suspense para virar a noite</small></div><span>→</span></button>
+        <button class="category category-3" data-cat="Aventura"><span class="category-number">04</span><div><b>Aventura</b><small>Mundos para explorar</small></div><span>→</span></button>
+        <button class="category category-4" data-cat="Infantojuvenil"><span class="category-number">05</span><div><b>Infantojuvenil</b><small>Primeiras descobertas</small></div><span>→</span></button>
+    </div>
+  </section>
+
+  <section class="catalog" id="catalogo">
+    <div class="section-head">
+      <div><span class="eyebrow">NOSSO ACERVO</span><h2>Escolha uma nova <em>história.</em></h2></div>
+      <span class="result-count" id="count">18 títulos</span>
+    </div>
+    <div class="filters">
+      <div class="pills"><button class="selected" data-cat="Todos">Todos</button><button data-cat="Clássicos">Clássicos</button><button data-cat="Literatura brasileira">Literatura brasileira</button><button data-cat="Mistério &amp; drama">Mistério &amp; drama</button><button data-cat="Aventura">Aventura</button><button data-cat="Infantojuvenil">Infantojuvenil</button></div>
+      <label class="search mobile-search"><span>⌕</span><input class="search-input" placeholder="Buscar no acervo"></label>
+    </div>
+    <div class="book-grid" id="grid">
+
+
+      <article class="book-card" data-id="2" data-title="O Médico e o Monstro" data-author="R. L. Stevenson" data-price="29,90" data-category="Clássicos">
+        <button class="cover-wrap" data-open><img src="assets/Monstro.jpg" alt="Capa de O Médico e o Monstro"></button>
+        <div class="book-info">
+          <div class="book-meta"><span>Clássicos</span><button class="heart" aria-label="Favoritar">♡</button></div>
+          <button class="book-title" data-open>O Médico e o Monstro</button>
+          <p>R. L. Stevenson</p>
+          <div class="book-bottom"><strong>R$ 29,90</strong><button class="add-btn">Adicionar</button></div>
+        </div>
+      </article>
+
+      <article class="book-card" data-id="3" data-title="Macbeth" data-author="William Shakespeare" data-price="27,50" data-category="Clássicos">
+        <button class="cover-wrap" data-open><img src="assets/Macbeth.jpg" alt="Capa de Macbeth"></button>
+        <div class="book-info">
+          <div class="book-meta"><span>Clássicos</span><button class="heart" aria-label="Favoritar">♡</button></div>
+          <button class="book-title" data-open>Macbeth</button>
+          <p>William Shakespeare</p>
+          <div class="book-bottom"><strong>R$ 27,50</strong><button class="add-btn">Adicionar</button></div>
+        </div>
+      </article>
+
+      <article class="book-card" data-id="4" data-title="A Ilha do Dr. Moreau" data-author="H. G. Wells" data-price="34,90" data-category="Clássicos">
+        <button class="cover-wrap" data-open><img src="assets/Moreau.jpg" alt="Capa de A Ilha do Dr. Moreau"></button>
+        <div class="book-info">
+          <div class="book-meta"><span>Clássicos</span><button class="heart" aria-label="Favoritar">♡</button></div>
+          <button class="book-title" data-open>A Ilha do Dr. Moreau</button>
+          <p>H. G. Wells</p>
+          <div class="book-bottom"><strong>R$ 34,90</strong><button class="add-btn">Adicionar</button></div>
+        </div>
+      </article>
+
+      <article class="book-card" data-id="5" data-title="Os Três Mosqueteiros" data-author="Alexandre Dumas" data-price="39,90" data-category="Aventura">
+        <button class="cover-wrap" data-open><img src="assets/Mosquetes.jpg" alt="Capa de Os Três Mosqueteiros"></button>
+        <div class="book-info">
+          <div class="book-meta"><span>Aventura</span><button class="heart" aria-label="Favoritar">♡</button></div>
+          <button class="book-title" data-open>Os Três Mosqueteiros</button>
+          <p>Alexandre Dumas</p>
+          <div class="book-bottom"><strong>R$ 39,90</strong><button class="add-btn">Adicionar</button></div>
+        </div>
+      </article>
+
+
+      <article class="book-card" data-id="7" data-title="O Conde de Monte Cristo" data-author="Alexandre Dumas" data-price="44,90" data-category="Aventura">
+        <button class="cover-wrap" data-open><img src="assets/Conde.jpg" alt="Capa de O Conde de Monte Cristo"></button>
+        <div class="book-info">
+          <div class="book-meta"><span>Aventura</span><button class="heart" aria-label="Favoritar">♡</button></div>
+          <button class="book-title" data-open>O Conde de Monte Cristo</button>
+          <p>Alexandre Dumas</p>
+          <div class="book-bottom"><strong>R$ 44,90</strong><button class="add-btn">Adicionar</button></div>
+        </div>
+      </article>
+
+
+      <article class="book-card" data-id="9" data-title="Um caso em Vermelho" data-author="Sir Arthur Conan Doyle" data-price="25,90" data-category="Mistério &amp; drama">
+        <button class="cover-wrap" data-open><img src="assets/Vermelho.jpg" alt="Capa de Vermelho"></button>
+        <div class="book-info">
+          <div class="book-meta"><span>Mistério &amp; drama</span><button class="heart" aria-label="Favoritar">♡</button></div>
+          <button class="book-title" data-open>Um caso em Vermelho</button>
+          <p>Fiódor Dostoiévski</p>
+          <div class="book-bottom"><strong>R$ 25,90</strong><button class="add-btn">Adicionar</button></div>
+        </div>
+      </article>
+
+
+      <article class="book-card" data-id="11" data-title="Jurassic Park" data-author="Michael Crichton" data-price="38,90" data-category="Aventura">
+        <button class="cover-wrap" data-open><img src="assets/Jurrasic.jpg" alt="Capa de Jurassic Park"></button>
+        <div class="book-info">
+          <div class="book-meta"><span>Aventura</span><button class="heart" aria-label="Favoritar">♡</button></div>
+          <button class="book-title" data-open>Jurassic Park</button>
+          <p>Michael Crichton</p>
+          <div class="book-bottom"><strong>R$ 38,90</strong><button class="add-btn">Adicionar</button></div>
+        </div>
+      </article>
+
+      <article class="book-card" data-id="14" data-title="O Cão dos Baskervilles" data-author="Arthur Conan Doyle" data-price="33,90" data-category="Mistério &amp; drama">
+        <button class="cover-wrap" data-open><img src="assets/Baskerville.jpg" alt="Capa de O Cão dos Baskervilles"></button>
+        <div class="book-info">
+          <div class="book-meta"><span>Mistério &amp; drama</span><button class="heart" aria-label="Favoritar">♡</button></div>
+          <button class="book-title" data-open>O Cão dos Baskervilles</button>
+          <p>Arthur Conan Doyle</p>
+          <div class="book-bottom"><strong>R$ 33,90</strong><button class="add-btn">Adicionar</button></div>
+        </div>
+      </article>
+
+
+      <article class="book-card" data-id="16" data-title="Memórias Póstumas de Brás Cubas" data-author="Machado de Assis" data-price="29,90" data-category="Literatura brasileira">
+        <button class="cover-wrap" data-open><img src="assets/Cubas.jpg" alt="Capa de Memórias Póstumas de Brás Cubas"></button>
+        <div class="book-info">
+          <div class="book-meta"><span>Literatura brasileira</span><button class="heart" aria-label="Favoritar">♡</button></div>
+          <button class="book-title" data-open>Memórias Póstumas de Brás Cubas</button>
+          <p>Machado de Assis</p>
+          <div class="book-bottom"><strong>R$ 29,90</strong><button class="add-btn">Adicionar</button></div>
+        </div>
+      </article>
+
+      <article class="book-card" data-id="17" data-title="Quincas Borba" data-author="Machado de Assis" data-price="27,90" data-category="Literatura brasileira">
+        <button class="cover-wrap" data-open><img src="assets/Quincas.jpg" alt="Capa de Quincas Borba"></button>
+        <div class="book-info">
+          <div class="book-meta"><span>Literatura brasileira</span><button class="heart" aria-label="Favoritar">♡</button></div>
+          <button class="book-title" data-open>Quincas Borba</button>
+          <p>Machado de Assis</p>
+          <div class="book-bottom"><strong>R$ 27,90</strong><button class="add-btn">Adicionar</button></div>
+        </div>
+      </article>
+
+
+    </div>
+  </section>
+
+  <section class="feature" id="classicos">
+    <div>
+      <span class="eyebrow">CURADORIA GRÃO &amp; PÁGINA</span>
+      <h2>Clássicos para reler, <em>descobrir e presentear.</em></h2>
+      <p>Da literatura universal aos grandes nomes brasileiros, reunimos edições que carregam marcas do tempo e continuam atuais.</p>
+      <button class="primary" data-cat="Clássicos">Ver clássicos →</button>
+    </div>
+    <div class="feature-covers">
+      <img class="fc-0" src="assets/Vermelho.jpg" alt="Sherlock">
+      <img class="fc-1" src="assets/Mosquetes.jpg" alt="Mosqueteiros">
+      <img class="fc-2" src="assets/Quincas.jpg" alt="Quincas Borba">
+    </div>
+  </section>
+
+  <section class="favorites" id="favoritos">
+    <div class="section-head">
+      <div><span class="eyebrow">SUA ESTANTE</span><h2>Favoritos para <em>voltar depois.</em></h2></div>
+      <span class="saved-count" id="favCount">0 salvos</span>
+    </div>
+    <div class="book-grid" id="favGrid">
+      <div class="favorite-empty"><p>Salve os livros que despertarem sua curiosidade.</p></div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="footer-main">
+    <div class="brand"><span class="bean">⌁</span><span><b>grão<span>&amp;</span>página</b><small>livros com histórias</small></span></div>
+    <p>Um sebo contemporâneo para livros que merecem continuar circulando.</p>
+    <button class="footer-sell" data-sell>Vender um livro →</button>
+  </div>
+  <div class="footer-bottom">
+    <span>© 2026 Grão &amp; Página</span>
+    <span>Livros • Café • Reencontros</span>
+  </div>
+</footer>
+
+<!-- Detalhe do livro -->
+<div class="modal-backdrop" id="detailModal" hidden>
+  <div class="detail-modal">
+    <button class="close" data-close aria-label="Fechar">×</button>
+    <div class="detail-cover"><img id="dImg" src="" alt=""></div>
+    <div class="detail-copy">
+      <span class="eyebrow" id="dCat"></span>
+      <h2 id="dTitle"></h2>
+      <p class="author" id="dAuthor"></p>
+      <p class="detail-text">Uma edição selecionada pelo Grão &amp; Página para leitores que gostam de histórias com personalidade.</p>
+      <strong class="detail-price" id="dPrice"></strong>
+      <button class="primary wide" id="dAdd">Adicionar à sacola →</button>
+    </div>
+  </div>
+</div>
+
+<!-- Sacola -->
+<div class="drawer-backdrop" id="drawer" hidden>
+  <aside class="drawer">
+    <div class="drawer-head">
+      <div><span class="eyebrow">SEUS ESCOLHIDOS</span><h2>Minha sacola</h2></div>
+      <button class="close-static" data-close aria-label="Fechar">×</button>
+    </div>
+    <div id="cartList"></div>
+  </aside>
+</div>
+
+<!-- Vender um livro -->
+<div class="modal-backdrop" id="sellModal" hidden>
+  <div class="sell-modal">
+    <button class="close" data-close aria-label="Fechar">×</button>
+    <span class="eyebrow">DEIXE A HISTÓRIA CONTINUAR</span>
+    <h2>Venda seu <em>livro.</em></h2>
+    <p>Uma área preparada para receber seus anúncios.</p>
+    <form id="sf">
+      <label>Título<input required placeholder="Nome do livro"></label>
+      <label>Autor<input required placeholder="Nome do autor"></label>
+      <div class="two">
+        <label>Preço<input required type="number" step=".01" placeholder="39,90"></label>
+        <label>Estado<select><option>Usado</option><option>Novo</option></select></label>
+      </div>
+      <button class="primary wide">Publicar anúncio →</button>
+    </form>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
