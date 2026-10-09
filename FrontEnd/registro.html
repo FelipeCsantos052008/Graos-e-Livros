@@ -6,11 +6,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro &amp; Cadastro</title>
     <link rel="stylesheet" href="./registro.css">
+    <style>
+        #mensagem {
+            display: block;
+            margin: 10px 0;
+            font-weight: bold;
+            text-align: center;
+        }
+    </style>
 </head>
 
 <body>
     <div class="wrapper">
-        <div>
+        <form id="form-cadastro">
             <h1>Registrar</h1>
             <div class="box">
                 <input id="nome" type="text" placeholder="Usuário" required>
@@ -30,16 +38,34 @@
             <div>
                 <label id="mensagem"></label>
             </div>
-            <button id="cadastrar" type="submit" class="btn">Cadastrar</button>
+            <button type="submit" class="btn">Cadastrar</button>
             <div class="registro">
                 <p>Já tem uma conta? <a href="login.html">Acessar</a></p>
             </div>
-        </div>
+        </form>
     </div>
-
-    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
-    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
-    <script src="registro.js"></script>
+    <script type="module" src="https://unpkg.com"></script>
+    <script nomodule src="https://unpkg.com"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const form = document.getElementById('form-cadastro');
+            const mensagem = document.getElementById('mensagem');
+            form.addEventListener('submit', (event) => {
+                event.preventDefault(); 
+                const nome = document.getElementById('nome').value;
+                const email = document.getElementById('email').value;
+                const senha = document.getElementById('senha').value;
+                const usuario = { nome, email, senha };
+                localStorage.setItem('usuarioCadastrado', JSON.stringify(usuario));
+                mensagem.style.color = '#28a745';
+                mensagem.textContent = 'Cadastro realizado com sucesso!';
+                form.reset();
+                setTimeout(() => {
+                    window.location.href = 'login.html';
+                }, 2000);
+            });
+        });
+    </script>
 </body>
 
 </html>
