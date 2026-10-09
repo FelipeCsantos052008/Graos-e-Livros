@@ -1,8 +1,8 @@
-let nome = document.getElementById("nome")
-let email = document.getElementById("email")
-let senha = document.getElementById("senha")
+let nome = document.querySelector('[name="nome"]')
+let email = document.querySelector('[name="email"]')
+let senha = document.querySelector('[name="senha"]')
 
-let texto = document.getElementById("mensagem")
+let texto = document.querySelector('[name="mensagem"]')
 
 async function cadastrar() {
   const nomeNovo = String(nome.value)
@@ -23,7 +23,7 @@ async function cadastrar() {
 
   if (response.ok) {
     mensagem.value = response.body.message
-    window.location.href = "index.html"
+    window.location.href = "login.html"
   } else {
     mensagem.value = "Não foi possivel cadastrar"
   }

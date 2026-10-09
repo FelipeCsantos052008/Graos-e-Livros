@@ -1,6 +1,7 @@
 import express from "express"
 import db from "../db.js"
 import bcrypt from "bcrypt"
+import jwt from "jsonwebtoken"
 
 const router = express.Router()
 
@@ -38,9 +39,31 @@ router.post("/login", async (req,res) => {
     if (query.length === 0) {
       return res.status(400).json({message: "Usúario inexistente"})
     }
+
+    const resultado = await bcrypt.compare(senha, query[0].senha)
     
+    if (!resultado) {
+      return res.status(401).json({
+        message: "Acesso negado"
+      })
+    }
+
+    const token = jwt.sign({
+      id: query[0].id,
+      email: query[0].email,
+      nome: query[0].nome
+    }, process.env.SECRET)
+    
+    return res.status(200).json({
+      message: "Acesso autorizado",
+      token: token
+    })
   } catch (erro) {
     console.log(erro)
+
+    return res.status(500).json({
+        message: "Erro interno no servidor"
+      })
   }
 })
 
