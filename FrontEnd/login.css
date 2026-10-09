@@ -15,7 +15,7 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: url(../images/biblioteca.png);
+  background-image: url(./assets/biblioteca.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
