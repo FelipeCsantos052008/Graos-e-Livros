@@ -15,7 +15,7 @@ body{
   justify-content: center;
   align-items: center;
   min-height: 100vh;
-  background-image: linear-gradient(rgba(0,0,0,0.45), rgba(0,0,0,0.45)), url('../img/canva-vintage-dark-academia-aesthetic-styled-desk,-writer-aesthetic-MAFdpKe8sW8.jpg');
+  background-image: url(../images/biblioteca.png);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -40,7 +40,7 @@ body{
   line-height: 1;
   text-align: center;
   margin-bottom: 18px;
-  color: #fff;
+  color: black;
   font-weight: 600;
 }
 
