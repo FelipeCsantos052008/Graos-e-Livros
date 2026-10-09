@@ -11,12 +11,6 @@ router.post("/cadastro", async (req,res) => {
       if (!nome || !email || !senha) {
           return res.status(400).json({message: "Faltando informações"})
       }
-      
-      const resposta = await db.query("SELECT email FROM usuarios WHERE email = ?", [email])
-  
-      if (resposta.length > 0) {
-          return res.status(409).json({ message: "Usúario já cadastrado"})
-      }
   
       const senhaHash = await bcrypt.hash(senha, 10)
       
@@ -28,8 +22,26 @@ router.post("/cadastro", async (req,res) => {
   
       return res.status(500).json({ message: "não foi possivel cadastrar" })
     } catch (erro) {
-      console.log(erro)
+      if (erro.code == "ER_DUP_ENTRY") {
+        return res.status(409).json({ message: "Usúario já cadastrado"})
+      }
     }
+})
+
+router.post("/login", async (req,res) => {
+  try {
+    const { email, senha } = req.body
+    if (!email || !senha) {
+      return res.status(400).json({message: "Faltando informações"})
+    }
+    const query = await db.query("SELECT * FROM usuarios WHERE email = ?", [email])
+    if (query.length === 0) {
+      return res.status(400).json({message: "Usúario inexistente"})
+    }
+    
+  } catch (erro) {
+    console.log(erro)
+  }
 })
 
 export default router
